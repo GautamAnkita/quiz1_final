@@ -1,0 +1,19 @@
+<%- include("./partials/header") %>
+
+<h1> Hello </h1>
+<div class="row">
+    <div class="col-sm-6">
+    <div class="card">
+        <div class="card-body">
+        <form action="/sign_in" method="POST">
+            <div class="form-group">
+                <label for="exampleInputName">User Name</label>
+                <input type="text" name="exampleInputName" value= ""class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-primary">SignIn</button>
+        </form>
+        </div>
+        </div>
+    </div>
+</div>
+<%- include("./partials/footer") %>

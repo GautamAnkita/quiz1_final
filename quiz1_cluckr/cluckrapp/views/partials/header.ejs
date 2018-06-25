@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <script src="/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a href="/" class="navbar-left"><img src="/images/hen.jpg" class="img-responsive" width ="50px" height= "50px"></a>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+      <form class="form-inline" action="/clucks" method="GET">
+        <button class="btn  my-2 my-sm-0" type="submit">Cluck!</button> 
+      </form>
+      </div>
+    </div>
+
+    <% if (username) { %>
+      <span class="navbar-text text-light">
+         <%= username %>
+      </span>  
+
+      <form class="form-inline ml-4" action="/sign_out" method="GET">
+        <button class="btn " type="submit">SignOut</button>
+      </form>
+    <% } else { %>
+      <form class="form-inline" action="/sign_in" method="GET">
+        <button class="btn  my-2 my-sm-0" type="submit">SignIn</button>
+      </form>
+    <% } %>
+  </nav>
+
+  <div class="container-fluid">
