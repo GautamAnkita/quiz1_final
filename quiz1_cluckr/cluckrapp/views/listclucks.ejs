@@ -1,0 +1,21 @@
+<%- include("./partials/header") %>
+<br>
+<div class="row">
+  <div class="col-md-12 jobs_index_middle_panels">
+    
+            <% info.forEach(clk => { %>
+            <div class="card mb-3">
+            <div class="card-body">
+            <img width="50px" src="<%= clk.image_Url %>" alt="">
+            <h3 class="card-title"><%= clk.username %></h3>
+
+            <h6 class= "card-subtitle mb-2 text-muted"><%= clk.description.split().join(", ") %></h6>
+        </div>
+    </div>
+            <% }) %>
+      
+  </div>
+</div>
+
+
+<%- include("./partials/footer") %>
